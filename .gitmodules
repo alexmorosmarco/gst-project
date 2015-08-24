@@ -1,0 +1,3 @@
+[submodule "gst-submodule"]
+	path = gst-submodule
+	url = https://github.com/alexmorosmarco/gst-submodule.git
