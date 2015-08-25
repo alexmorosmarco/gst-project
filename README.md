@@ -8,7 +8,7 @@ Below you can find the most frequent git commands, and an explanation, to work w
 
 **Add a submodule to the main project.**
 
-`git submodule add https://github.com/alexmorosmarco/gst-submodule.git`
+**`git submodule add https://github.com/alexmorosmarco/gst-submodule.git`**
 
 This command adds a git repository as a submodule of main project and clones it to the current path, inside a folder named as the submodule repository by default. So in the above example it creates a folder called "gst-submodule" on current path and clones the repository inside it.
 
