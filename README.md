@@ -6,7 +6,7 @@ The basic idea is that the main project repository will be linked to one concret
 
 Below you can find the most frequent git commands, and an explanation, to work with git submodules in a typical scenario between different developers. Code snippets are based on a main project called "gst-project" and a submodule project called "gst-submodule".
 
-**Add a submodule to the main project.**
+##Add a submodule to the main project.
 
 **`git submodule add https://github.com/alexmorosmarco/gst-submodule.git`**
 
@@ -18,7 +18,7 @@ Alternatively we can define other name for the folder as an additional parameter
 
 *Actually it is not same thing as cloning. It clones the code of a concrete commit (last one of master by default), and not the code of the head of a concrete branch. So when pulling the main project the submodule code is also pulled but the linked commit is not updated cause the submodule is frozen at that concrete commit by security.*
 
-**Check the status of the submodules**
+##Check the status of the submodules
 
 **`cat .gitmodules`**
 
@@ -28,7 +28,7 @@ The command *"git add submodule"* creates a new file called ".gitmodules" which 
 
 Prints the pointed commit SHA of every submodule of the main project.
 
-**How to work between several developers. The common scenario through several steps**
+##How to work between several developers. The common scenario through several steps
 
 1. **1st developer adds submodules to the main project**
 2. **2nd developer prepares his local copy**
