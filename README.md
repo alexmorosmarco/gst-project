@@ -8,9 +8,9 @@ Below you can find the most frequent git commands and an explanation, to work wi
 
 **`git submodule add https://github.com/alexmorosmarco/gst-submodule.git`**
 
-This command adds a git repository as a submodule of main project and clones it to the current path, inside a folder named as the submodule repository by default. So in the above example it creates a folder called "gst-submodule" on current path and clones the repository inside it.
+This command adds a git repository as a submodule of main project and clones it to the current path, inside a folder named as the submodule repository name by default. So in the above example it creates a folder called *"gst-submodule"* on current path and clones the repository inside it.
 
-Actually it is not same thing as cloning. It clones the code of a concrete commit (last one of master by default), and not the code of the head of a concrete branch. So when pulling the main project the submodule code is also pulled but the linked commit is not updated cause the submodule is frozen at that concrete commit by security.
+Actually it is not same thing as cloning. It clones the code of a concrete commit (last one of master branch by default), and not the code of the head of a concrete branch. So when pulling the main project the submodule code is also pulled but the connected commit is not updated cause the submodule is frozen at that concrete commit by security.
 
 **`git submodule add https://github.com/alexmorosmarco/gst-submodule.git <path_to_submodule>`**
 
@@ -20,7 +20,7 @@ Alternatively we can define other name for the folder as an additional parameter
 
 **`cat .gitmodules`**
 
-The command *"git add submodule"* creates a new file called ".gitmodules" which contains the information of the submodules (paths and names). Yo can have a look at it to see that information.
+The command *"git submodule add"* creates a new file called *".gitmodules"* which contains the information of the submodules (local and remote paths and names). Yo can have a look at it to see that information.
 
 **`git submodule status`**
 
