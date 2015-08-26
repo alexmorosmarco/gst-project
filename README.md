@@ -56,4 +56,5 @@ Prints the pointed commit SHA of every submodule of the main project. That SHA i
 
      It updates the submodules to the pointed SHA commit by the main project.
 
-
+##Credits.
+Thanks to "svenax" for uploading [this](https://www.youtube.com/watch?v=NJpwdJEO8iI&index=6&list=PLTrpxxj1hzeoEqRbTRSZAheyowzcZQlWN) screencast from Scott Chacon.
