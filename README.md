@@ -31,8 +31,9 @@ Prints the pointed commit SHA of every submodule of the main project.
 
 ##The typical scenario between several developers.
 
-1. **1st developer adds submodules to the main project** using `git submodule add ...` command like explained before.
-2. **2nd developer prepares his local copy of the main project:**
+Step 1: **1st developer adds submodules to the main project** using `git submodule add ...` command like explained before.
+
+Step 2: **2nd developer prepares his local copy of the main project:**
   1. Clone the main project using `git clone https://github.com/alexmorosmarco/gst-project.git` (if it is not already on local; otherwise `git pull` to get its last version).
   2. `git submodule init`
 
@@ -40,10 +41,12 @@ Prints the pointed commit SHA of every submodule of the main project.
   3. `git submodule update`
 
      Clones the submodules repositories if their code has not been checked out and points the submodule local repository to the commit that is defined for this submodule in the main project. If the code had already been checked out including that commit, then it just points the submodule local repository to that commit. If the pointed commit has not been checked out, then a `git pull` of the main project is needed before doing a `git submodule update`.
-3. **1st developer modifies a submodule and pushes it**
+     
+Step 3: **1st developer modifies a submodule and pushes it**
   1. Commit and push the changes on the submodule git repository.
   2. Commit and push the submodule folder on main project git repository, which contains the pointed commit SHA of the submodule.
-4. **2nd developer updates to last changes on the submodules**
+  
+Step 4: **2nd developer updates to last changes on the submodules**
   1. `git pull`
 
       On main project folder. It will pull the main project code and also the submodules code. Instead of this you can do `git fetch` and then `git merge ...` the branches as you need, but take into account that the submodules folders of main project need to be checked out so that git can update the submodules later.
