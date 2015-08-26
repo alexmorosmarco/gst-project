@@ -7,7 +7,7 @@ Below you can find the most frequent git commands and an explanation, to work wi
 ##Add a submodule to the main project.
 
 **`git submodule add https://github.com/alexmorosmarco/gst-submodule.git`**
-
+*(must be executed on main project path)*
 This command adds a git repository as a submodule of main project and clones it to the current path, inside a folder named as the submodule repository name by default. So in the above example it creates a folder called *"gst-submodule"* on current path and clones the repository inside it.
 
 Actually it is not same thing as cloning. It clones the code of a concrete commit (last one of master branch by default), and not the code of the head of a concrete branch. So when pulling the main project the submodule code is also pulled but the connected commit is not updated cause the submodule is frozen at that concrete commit by security.
