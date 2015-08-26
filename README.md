@@ -22,7 +22,7 @@ Alternatively we can define other name for the folder as an additional parameter
 **`cat .gitmodules`**
 *(must be executed on main project path)*
 
-The command *"git submodule add"* creates a new file called *".gitmodules"* which contains the information of the submodules (local and remote paths and names). Yo can have a look at it to see that information.
+The command `git submodule add` creates a new file called *".gitmodules"* which contains the information of the submodules (local and remote paths and names). Yo can have a look at it to see that information.
 
 **`git submodule status`**
 *(must be executed on main project path)*
@@ -31,15 +31,15 @@ Prints the pointed commit SHA of every submodule of the main project.
 
 ##The typical scenario between several developers.
 
-1. **1st developer adds submodules to the main project**
-2. **2nd developer prepares his local copy**
-  1. Clone the main project
+1. **1st developer adds submodules to the main project** using `git submodule add` command like explained before.
+2. **2nd developer prepares his local copy of the main project:**
+  1. Clone the main project using `git clone https://github.com/alexmorosmarco/gst-project.git` (if it is not already on local; otherwise `git pull` to get its last version).
   2. `git submodule init`
 
-     Initialize the submodules based on the content of the file ".gitmodules". This command does not clone/download any code.
+     Initializes the submodules based on the content of the file *".gitmodules"* of main project. This command does not clone/download any code.
   3. `git submodule update`
 
-     Clone the submodules repositories if their code is not in local, so if their code has not been checked out. If the code had already been checked out then it just points the submodule local repository to the commit that is defined for this submodule in the main project. If their code has had new commits and I have not checked them out, I need to do a git pull of the main project before doing a git submodule update.
+     Clones the submodules repositories if their code has not been checked out and points the submodule local repository to the commit that is defined for this submodule in the main project. If the code had already been checked out including that commit, then it just points the submodule local repository to that commit. If the pointed commit has not been checked out, then a `git pull` of the main project is needed before doing a `git submodule update`.
 3. **1st developer modifies a submodule and pushes it**
   1. Commit and push the changes on the submodule git repository
   2. Commit and push the submodule folder on main project git repository, which contains the pointed commit SHA of the submodule.
