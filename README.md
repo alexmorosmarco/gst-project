@@ -1,5 +1,3 @@
-# gst-project (*Git submodules test - Main project*)
-
 Git submodules are the proper way to use git repositories that are libraries/packages/modules from a main project git repository.
 
 The basic idea is that the main project repository will be connected to one concrete commit of the submodule. This commit can be changed using typical git commands on the submodule repository like "git checkout" as we will see.
