@@ -27,7 +27,7 @@ The command `git submodule add` creates a new file called *".gitmodules"* which 
 **`git submodule status`**
 *(must be executed on main project path)*
 
-Prints the pointed commit SHA of every submodule of the main project.
+Prints the pointed commit SHA of every submodule of the main project. That SHA is stored in the *folder file* of each submodule.
 
 ##The typical scenario between several developers.
 
@@ -44,7 +44,9 @@ Prints the pointed commit SHA of every submodule of the main project.
      
 **Step 3: 1st developer modifies a submodule and pushes it**
   1. Commit and push the changes on the submodule git repository.
-  2. Commit and push the submodule folder on main project git repository, which contains the pointed commit SHA of the submodule.
+  2. Commit and push the changes on main project git repository, that will include the submodule folder which contains the new pointed commit SHA of the submodule.
+     
+     *Note:* this works like this cause everytime we change the current commit on the submodule git repository, through `git checkout ...` or `git commit ...` for instance, the main project local submodule *folder file* will point to that commit.
   
 **Step 4: 2nd developer updates to last changes on the submodules**
   1. `git pull`
