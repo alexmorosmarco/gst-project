@@ -1,3 +1,6 @@
+# Git Submodules test - Main project
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/alexmorosmarco/gst-project/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 Git submodules are the proper way to use git repositories that are libraries/packages/modules from a main project git repository.
 
 The basic idea is that the main project repository will be connected to one concrete commit of the submodule. This commit can be changed using typical git commands on the submodule repository like "git checkout" as we will see.
