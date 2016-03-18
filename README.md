@@ -1,5 +1,4 @@
 # Git Submodules test - Main project
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/alexmorosmarco/gst-project/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 Git submodules are the proper way to use git repositories that are libraries/packages/modules from a main project git repository.
 
